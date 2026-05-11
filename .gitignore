@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+.pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+dist/
+*.tsbuildinfo
+
+# Environment variables (never commit real envs)
+.env
+.env.local
+.env.production
+.env.development
+
+# Logs
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Vercel
+.vercel/

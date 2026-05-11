@@ -1,0 +1,191 @@
+{
+  "items": [
+    {
+      "id": "10.1",
+      "title": "Header Installation",
+      "description": "Verify header installation at door/window openings per plan specifications",
+      "isBlocking": true,
+      "subItems": [
+        { "id": "10.1.1", "text": "Header size matches plans", "completed": false },
+        { "id": "10.1.2", "text": "Header bearing on studs", "completed": false },
+        { "id": "10.1.3", "text": "All headers present", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    },
+    {
+      "id": "10.2",
+      "title": "Stud Spacing & Alignment",
+      "description": "Verify stud spacing at 16\" or 24\" OC as per plan and all studs are plumb",
+      "isBlocking": true,
+      "subItems": [
+        { "id": "10.2.1", "text": "Studs at correct spacing", "completed": false },
+        { "id": "10.2.2", "text": "Studs are plumb", "completed": false },
+        { "id": "10.2.3", "text": "No damaged studs", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    },
+    {
+      "id": "10.3",
+      "title": "Blocking & Bridging",
+      "description": "Verify blocking and bridging installed per framing plan",
+      "isBlocking": true,
+      "subItems": [
+        { "id": "10.3.1", "text": "Blocking installed at height requirements", "completed": false },
+        { "id": "10.3.2", "text": "Bridging between studs (if required)", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    },
+    {
+      "id": "10.4",
+      "title": "Beam & Joist Installation",
+      "description": "Verify beam sizing, bearing, and joist installation",
+      "isBlocking": false,
+      "subItems": [
+        { "id": "10.4.1", "text": "Beam size matches plans", "completed": false },
+        { "id": "10.4.2", "text": "Beam bearing adequate", "completed": false },
+        { "id": "10.4.3", "text": "Joists at correct spacing", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    },
+    {
+      "id": "10.5",
+      "title": "Rim Board & Band Board",
+      "description": "Verify rim board and band board installation",
+      "isBlocking": false,
+      "subItems": [
+        { "id": "10.5.1", "text": "Rim board installed correctly", "completed": false },
+        { "id": "10.5.2", "text": "No gaps between rim and joists", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    },
+    {
+      "id": "10.6",
+      "title": "Sheathing Installation",
+      "description": "Verify sheathing properly installed and fastened",
+      "isBlocking": false,
+      "subItems": [
+        { "id": "10.6.1", "text": "Sheathing covers all framing", "completed": false },
+        { "id": "10.6.2", "text": "Sheathing fastening adequate", "completed": false },
+        { "id": "10.6.3", "text": "No damaged sheathing", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    },
+    {
+      "id": "10.7",
+      "title": "Flashing Installation",
+      "description": "Verify all flashing installed per waterproofing requirements",
+      "isBlocking": false,
+      "subItems": [
+        { "id": "10.7.1", "text": "Window flashing installed", "completed": false },
+        { "id": "10.7.2", "text": "Door flashing installed", "completed": false },
+        { "id": "10.7.3", "text": "Penetration flashing present", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    },
+    {
+      "id": "10.8",
+      "title": "MEP Roughin Holes",
+      "description": "Verify mechanical, electrical, and plumbing holes and penetrations",
+      "isBlocking": true,
+      "subItems": [
+        { "id": "10.8.1", "text": "Holes sized correctly", "completed": false },
+        { "id": "10.8.2", "text": "Holes positioned per MEP plans", "completed": false },
+        { "id": "10.8.3", "text": "Sleeves installed for large penetrations", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    },
+    {
+      "id": "10.9",
+      "title": "Fire-Rated Assemblies",
+      "description": "Verify fire-rated wall and floor assemblies per code",
+      "isBlocking": false,
+      "subItems": [
+        { "id": "10.9.1", "text": "Fire-rated wall properly framed", "completed": false },
+        { "id": "10.9.2", "text": "Fire blocking installed", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    },
+    {
+      "id": "10.10",
+      "title": "Lateral Bracing",
+      "description": "Verify temporary and permanent lateral bracing",
+      "isBlocking": false,
+      "subItems": [
+        { "id": "10.10.1", "text": "Temporary bracing installed", "completed": false },
+        { "id": "10.10.2", "text": "No structural defects", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    },
+    {
+      "id": "10.11",
+      "title": "Connection Hardware",
+      "description": "Verify all connection hardware installed per plans",
+      "isBlocking": false,
+      "subItems": [
+        { "id": "10.11.1", "text": "Joist hangers installed correctly", "completed": false },
+        { "id": "10.11.2", "text": "Beam-to-column connections secure", "completed": false },
+        { "id": "10.11.3", "text": "Fasteners appropriate size/type", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    },
+    {
+      "id": "10.12",
+      "title": "Stairs & Railings",
+      "description": "Verify temporary stairs and safety railings",
+      "isBlocking": false,
+      "subItems": [
+        { "id": "10.12.1", "text": "Temporary stairs safe and stable", "completed": false },
+        { "id": "10.12.2", "text": "Safety railings installed", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    },
+    {
+      "id": "10.13",
+      "title": "Structural Defects",
+      "description": "Verify no cracks, splits, or other structural defects",
+      "isBlocking": false,
+      "subItems": [
+        { "id": "10.13.1", "text": "No cracks in wood members", "completed": false },
+        { "id": "10.13.2", "text": "No cupping or warping", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    },
+    {
+      "id": "10.14",
+      "title": "Installation Quality",
+      "description": "Overall framing quality meets standards",
+      "isBlocking": false,
+      "subItems": [
+        { "id": "10.14.1", "text": "Workmanship acceptable", "completed": false },
+        { "id": "10.14.2", "text": "No shortcuts observed", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    },
+    {
+      "id": "10.15",
+      "title": "Site Cleanup",
+      "description": "Verify site clean and debris removed",
+      "isBlocking": false,
+      "subItems": [
+        { "id": "10.15.1", "text": "Debris cleared from site", "completed": false },
+        { "id": "10.15.2", "text": "Safety area maintained", "completed": false }
+      ],
+      "completed": false,
+      "evidenceCount": 0
+    }
+  ]
+}

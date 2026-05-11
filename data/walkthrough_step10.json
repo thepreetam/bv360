@@ -1,0 +1,470 @@
+{
+  "points": [
+    {
+      "id": "E1",
+      "title": "East Elevation - Property Line",
+      "instructions": "Stand at the property line on the east side of the building. Capture the entire east elevation showing all framing.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Full east elevation view",
+          "prefillDrawingSheet": "A3.0 Elevations",
+          "prefillCategory": "Location",
+          "checklistItem": "10.2",
+          "captured": false
+        },
+        {
+          "type": "photo",
+          "description": "East elevation detail - header condition",
+          "prefillDrawingSheet": "A3.0 Elevations",
+          "prefillCategory": "Dimensional",
+          "checklistItem": "10.1",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "E2",
+      "title": "East Wall - Corner Detail",
+      "instructions": "At the NE corner, capture the corner framing condition and stud alignment.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Corner stud alignment",
+          "prefillDrawingSheet": "A4.1 Framing Details",
+          "prefillCategory": "Dimensional",
+          "checklistItem": "10.2",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "E3",
+      "title": "East Wall - Window Opening E-1",
+      "instructions": "Capture the E-1 window opening showing header, sill, and surrounding framing.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "E-1 window opening with header",
+          "prefillDrawingSheet": "A3.1 Door and Window Schedule",
+          "prefillCategory": "Dimensional",
+          "checklistItem": "10.1",
+          "captured": false
+        },
+        {
+          "type": "photo",
+          "description": "E-1 flashing detail",
+          "prefillDrawingSheet": "A3.1 Door and Window Schedule",
+          "prefillCategory": "Connection",
+          "checklistItem": "10.7",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "W1",
+      "title": "West Elevation - Overview",
+      "instructions": "From the west property line, capture the full west elevation of the building.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Full west elevation",
+          "prefillDrawingSheet": "A3.0 Elevations",
+          "prefillCategory": "Location",
+          "checklistItem": "10.2",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "W2",
+      "title": "West Wall - Door Opening",
+      "instructions": "Capture the main entry door opening, header condition, and framing.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Main entry door header",
+          "prefillDrawingSheet": "A3.1 Door and Window Schedule",
+          "prefillCategory": "Dimensional",
+          "checklistItem": "10.1",
+          "captured": false
+        },
+        {
+          "type": "photo",
+          "description": "Door opening flashing",
+          "prefillDrawingSheet": "A3.1 Door and Window Schedule",
+          "prefillCategory": "Connection",
+          "checklistItem": "10.7",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "N1",
+      "title": "North Elevation - Overview",
+      "instructions": "From the north property line, capture the full north elevation.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Full north elevation",
+          "prefillDrawingSheet": "A3.0 Elevations",
+          "prefillCategory": "Location",
+          "checklistItem": "10.2",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "N2",
+      "title": "North Wall - Gable Framing",
+      "instructions": "Capture the gable framing at the north end, including king studs and collar ties.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Gable framing and collar ties",
+          "prefillDrawingSheet": "A4.1 Framing Details",
+          "prefillCategory": "Dimensional",
+          "checklistItem": "10.3",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "S1",
+      "title": "South Elevation - Overview",
+      "instructions": "From the south side, capture the full south elevation of the structure.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Full south elevation",
+          "prefillDrawingSheet": "A3.0 Elevations",
+          "prefillCategory": "Location",
+          "checklistItem": "10.2",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "INT1",
+      "title": "Interior - Main Beam",
+      "instructions": "Capture the main beam support showing bearing on columns/walls.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Main beam and bearing condition",
+          "prefillDrawingSheet": "A2.1 Floor Framing",
+          "prefillCategory": "Dimensional",
+          "checklistItem": "10.4",
+          "captured": false
+        },
+        {
+          "type": "photo",
+          "description": "Joist connection to beam",
+          "prefillDrawingSheet": "A4.1 Framing Details",
+          "prefillCategory": "Connection",
+          "checklistItem": "10.11",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "INT2",
+      "title": "Interior - Floor Joists",
+      "instructions": "Show joist spacing, alignment, and any bridging or lateral bracing.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Floor joist field with spacing visible",
+          "prefillDrawingSheet": "A2.1 Floor Framing",
+          "prefillCategory": "Dimensional",
+          "checklistItem": "10.4",
+          "captured": false
+        },
+        {
+          "type": "photo",
+          "description": "Bridging or blocking detail",
+          "prefillDrawingSheet": "A4.1 Framing Details",
+          "prefillCategory": "Connection",
+          "checklistItem": "10.3",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "INT3",
+      "title": "Interior - Rim Board",
+      "instructions": "Capture the rim/band board connection at the perimeter.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Rim board and joist connection",
+          "prefillDrawingSheet": "A2.1 Floor Framing",
+          "prefillCategory": "Connection",
+          "checklistItem": "10.5",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "MEP1",
+      "title": "MEP - Electrical Holes",
+      "instructions": "Capture all electrical rough-in holes showing location and sizing.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Electrical outlet/box rough-in holes",
+          "prefillDrawingSheet": "E2.1 Electrical Framing Plan",
+          "prefillCategory": "Location",
+          "checklistItem": "10.8",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "MEP2",
+      "title": "MEP - Plumbing Holes",
+      "instructions": "Show all plumbing penetrations and drain lines through framing.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Plumbing hole locations and sizing",
+          "prefillDrawingSheet": "P2.1 Plumbing Framing Plan",
+          "prefillCategory": "Location",
+          "checklistItem": "10.8",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "MEP3",
+      "title": "MEP - HVAC Ductwork",
+      "instructions": "Capture HVAC duct rough-in and any structural penetrations.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "HVAC duct sizing and routing",
+          "prefillDrawingSheet": "M2.1 Mechanical Framing Plan",
+          "prefillCategory": "Location",
+          "checklistItem": "10.8",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "SHE1",
+      "title": "Sheathing - Exterior Walls",
+      "instructions": "Verify wall sheathing is properly installed and fastened.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Wall sheathing fastening pattern",
+          "prefillDrawingSheet": "A5.0 Details",
+          "prefillCategory": "Material",
+          "checklistItem": "10.6",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "SHE2",
+      "title": "Sheathing - Roof Sheathing",
+      "instructions": "Capture roof sheathing installation and fastening.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Roof sheathing and rafter connections",
+          "prefillDrawingSheet": "A5.0 Details",
+          "prefillCategory": "Material",
+          "checklistItem": "10.6",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "FIRE1",
+      "title": "Fire-Rated Assembly",
+      "instructions": "Document fire-rated wall assembly construction per plans.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Fire-rated wall framing and blocking",
+          "prefillDrawingSheet": "A4.2 Fire Rating Details",
+          "prefillCategory": "Material",
+          "checklistItem": "10.9",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "BRACE1",
+      "title": "Lateral Bracing - Temporary",
+      "instructions": "Show all temporary lateral bracing and shoring.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Temporary bracing configuration",
+          "prefillDrawingSheet": "A6.0 Temporary Support",
+          "prefillCategory": "Connection",
+          "checklistItem": "10.10",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "CONN1",
+      "title": "Hardware - Joist Hangers",
+      "instructions": "Verify all joist hanger installations for correct size and fastening.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Joist hanger detail - fastener pattern",
+          "prefillDrawingSheet": "A4.3 Hardware Details",
+          "prefillCategory": "Connection",
+          "checklistItem": "10.11",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "CONN2",
+      "title": "Hardware - Column Connections",
+      "instructions": "Show column-to-beam and column-to-footing connections.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Column connection hardware",
+          "prefillDrawingSheet": "A4.3 Hardware Details",
+          "prefillCategory": "Connection",
+          "checklistItem": "10.11",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "STAIR1",
+      "title": "Temporary Stairs",
+      "instructions": "Document temporary stair construction for safety compliance.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Temporary stair assembly and handrails",
+          "prefillDrawingSheet": "A6.1 Temporary Stairs",
+          "prefillCategory": "Material",
+          "checklistItem": "10.12",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "DEFECT1",
+      "title": "Structural Defects - Wood Quality",
+      "instructions": "Inspect for cracks, splits, warping, or other wood defects.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Wood member condition check",
+          "prefillDrawingSheet": "A1.0 Site Plan",
+          "prefillCategory": "Deficiency",
+          "checklistItem": "10.13",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "DEFECT2",
+      "title": "Structural Defects - Overall Quality",
+      "instructions": "Document overall workmanship quality and any construction issues.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "General framing quality assessment",
+          "prefillDrawingSheet": "A1.0 Site Plan",
+          "prefillCategory": "Deficiency",
+          "checklistItem": "10.14",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "CLEAN1",
+      "title": "Site Cleanup",
+      "instructions": "Verify site is clean and debris is properly removed.",
+      "requiredShots": [
+        {
+          "type": "photo",
+          "description": "Site cleanup status",
+          "prefillDrawingSheet": "A1.0 Site Plan",
+          "prefillCategory": "As-Built",
+          "checklistItem": "10.15",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    },
+    {
+      "id": "ST1",
+      "title": "Structural System - Overall",
+      "instructions": "Final overview of the complete structural framing system.",
+      "requiredShots": [
+        {
+          "type": "video_360",
+          "duration": 30,
+          "description": "360° pan of interior space showing framing",
+          "prefillDrawingSheet": "A2.0 Floor Plans",
+          "prefillCategory": "As-Built",
+          "checklistItem": "10.14",
+          "captured": false
+        }
+      ],
+      "completed": false,
+      "capturedShots": []
+    }
+  ]
+}
