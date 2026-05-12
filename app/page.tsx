@@ -9,14 +9,14 @@ export default function HomePage() {
         
         <div className="space-y-3">
           <Link
-            href="/projects/demo/steps/10"
+            href="/projects/demo"
             className="block px-6 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-900 transition-colors"
           >
             Open Demo Project
           </Link>
           
           <p className="text-xs text-gray-500">
-            Access the Step 10: Rough Framing inspection module
+            View project details, upload architectural drawings, and run inspections
           </p>
         </div>
       </div>

@@ -18,7 +18,17 @@ export default function ProjectDetailPage({ params }: { params: Promise<{ id: st
   const fetchProject = useCallback(async () => {
     try {
       const res = await fetch(`/api/projects/${id}`);
-      if (res.ok) {
+      if (res.status === 404 && id === 'demo') {
+        const createRes = await fetch('/api/projects', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: 'Demo Project', address: '123 Main St, Anytown, USA' }),
+        });
+        if (createRes.ok) {
+          const data = await createRes.json();
+          setProject(data);
+        }
+      } else if (res.ok) {
         const data = await res.json();
         setProject(data);
       }
