@@ -9,6 +9,8 @@ import type {
   AIDetection,
   AuditLog,
   VerificationCategory,
+  Drawing,
+  ParsedDrawingData,
 } from './types';
 import { seedChecklistItems, seedDrawingSheets } from './schema';
 
@@ -330,4 +332,77 @@ export async function getAuditLogs(
     `;
 
   return result.rows as AuditLog[];
+}
+
+// === Drawing Operations ===
+
+export async function createDrawing(data: {
+  project_id: string;
+  sheet_name: string;
+  file_url: string;
+  file_type: 'pdf' | 'dwg';
+  page_count?: number | null;
+  file_size_bytes?: number | null;
+}): Promise<Drawing> {
+  const result = await sql`
+    INSERT INTO drawings (project_id, sheet_name, file_url, file_type, page_count, file_size_bytes)
+    VALUES (
+      ${data.project_id}::uuid, ${data.sheet_name}, ${data.file_url},
+      ${data.file_type}, ${data.page_count ?? null}, ${data.file_size_bytes ?? null}
+    )
+    RETURNING id, project_id, sheet_name, file_url, file_type, parse_status,
+              parse_result, parse_error, page_count, file_size_bytes,
+              created_at, updated_at
+  `;
+  return result.rows[0] as Drawing;
+}
+
+export async function getDrawingsForProject(projectId: string): Promise<Drawing[]> {
+  const result = await sql`
+    SELECT id, project_id, sheet_name, file_url, file_type, parse_status,
+           parse_result, parse_error, page_count, file_size_bytes,
+           created_at, updated_at
+    FROM drawings
+    WHERE project_id = ${projectId}::uuid
+    ORDER BY created_at DESC
+  `;
+  return result.rows as Drawing[];
+}
+
+export async function getDrawingById(id: string): Promise<Drawing | null> {
+  const result = await sql`
+    SELECT id, project_id, sheet_name, file_url, file_type, parse_status,
+           parse_result, parse_error, page_count, file_size_bytes,
+           created_at, updated_at
+    FROM drawings
+    WHERE id = ${id}::uuid
+  `;
+  return result.rows[0] as Drawing | null;
+}
+
+export async function updateDrawingParseResult(
+  id: string,
+  status: 'processing' | 'completed' | 'failed',
+  result?: ParsedDrawingData,
+  error?: string
+): Promise<Drawing> {
+  const parseResult = status === 'completed' && result ? JSON.stringify(result) : null;
+  const parseError = status === 'failed' && error ? error : null;
+
+  const dbResult = await sql`
+    UPDATE drawings
+    SET parse_status = ${status},
+        parse_result = ${parseResult},
+        parse_error = ${parseError},
+        updated_at = now()
+    WHERE id = ${id}::uuid
+    RETURNING id, project_id, sheet_name, file_url, file_type, parse_status,
+              parse_result, parse_error, page_count, file_size_bytes,
+              created_at, updated_at
+  `;
+  return dbResult.rows[0] as Drawing;
+}
+
+export async function deleteDrawing(id: string): Promise<void> {
+  await sql`DELETE FROM drawings WHERE id = ${id}::uuid`;
 }

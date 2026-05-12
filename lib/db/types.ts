@@ -121,3 +121,61 @@ export const VERIFICATION_TYPES = [
 ] as const;
 
 export type VerificationType = typeof VERIFICATION_TYPES[number];
+
+export interface Drawing {
+  id: string;
+  project_id: string;
+  sheet_name: string;
+  file_url: string;
+  file_type: 'pdf' | 'dwg';
+  parse_status: 'pending' | 'processing' | 'completed' | 'failed';
+  parse_result: ParsedDrawingData | null;
+  parse_error: string | null;
+  page_count: number | null;
+  file_size_bytes: number | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ParsedDrawingData {
+  project_info: {
+    project_name?: string;
+    address?: string;
+    client_name?: string;
+    plan_number?: string;
+    revision?: string;
+    date?: string;
+  };
+  structural_elements: Array<{
+    element: string;
+    location: string;
+    dimensions: string;
+    material: string;
+    notes?: string;
+  }>;
+  dimensions: Array<{
+    type: string;
+    value: string;
+    location: string;
+    tolerance?: string;
+  }>;
+  specifications: Array<{
+    category: string;
+    item: string;
+    standard: string;
+    notes?: string;
+  }>;
+  rooms: Array<{
+    name: string;
+    dimensions: string;
+    elevation?: string;
+    finish?: string;
+  }>;
+  overall_dimensions: {
+    length: string;
+    width: string;
+    height: string;
+    total_area?: string;
+  };
+  raw_text: string;
+}

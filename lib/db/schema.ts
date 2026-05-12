@@ -116,6 +116,23 @@ export async function initializeSchema() {
     )
   `;
 
+  await sql`
+    CREATE TABLE IF NOT EXISTS drawings (
+      id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+      project_id UUID NOT NULL REFERENCES projects(id) ON DELETE CASCADE,
+      sheet_name VARCHAR(255) NOT NULL,
+      file_url VARCHAR(2048) NOT NULL,
+      file_type VARCHAR(20) NOT NULL DEFAULT 'pdf' CHECK (file_type IN ('pdf', 'dwg')),
+      parse_status VARCHAR(20) NOT NULL DEFAULT 'pending' CHECK (parse_status IN ('pending', 'processing', 'completed', 'failed')),
+      parse_result JSONB,
+      parse_error TEXT,
+      page_count INT,
+      file_size_bytes INT,
+      created_at TIMESTAMP NOT NULL DEFAULT now(),
+      updated_at TIMESTAMP NOT NULL DEFAULT now()
+    )
+  `;
+
   const indexes = [
     'CREATE INDEX IF NOT EXISTS idx_projects_created_at ON projects(created_at DESC)',
     'CREATE INDEX IF NOT EXISTS idx_steps_project_id ON steps(project_id)',
@@ -123,6 +140,7 @@ export async function initializeSchema() {
     'CREATE INDEX IF NOT EXISTS idx_checklist_step_id ON checklist_items(step_id)',
     'CREATE INDEX IF NOT EXISTS idx_subitem_checklist_id ON checklist_sub_items(checklist_item_id)',
     'CREATE INDEX IF NOT EXISTS idx_drawings_project_id ON drawing_sheets(project_id)',
+    'CREATE INDEX IF NOT EXISTS idx_drawings_project_id2 ON drawings(project_id)',
     'CREATE INDEX IF NOT EXISTS idx_evidence_step_id ON evidence(step_id)',
     'CREATE INDEX IF NOT EXISTS idx_evidence_sheet_id ON evidence(drawing_sheet_id)',
     'CREATE INDEX IF NOT EXISTS idx_evidence_category ON evidence(verification_category)',
