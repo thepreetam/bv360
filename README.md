@@ -2,7 +2,8 @@
 
 A production-grade mobile-first inspection module for residential construction, built with Next.js 16, Vercel Postgres, and Gemini AI.
 
-Live demo: https://bv360.vercel.app/projects/demo/steps/10
+**Step 10:** https://bv360.vercel.app/projects/demo/steps/10
+**Project Detail:** https://bv360.vercel.app/projects/demo
 
 ---
 
@@ -139,7 +140,7 @@ data/
 
 ## Database Schema
 
-8 tables matching the engineering spec:
+9 tables matching the engineering spec:
 
 | Table | Description |
 |-------|-------------|
@@ -148,6 +149,7 @@ data/
 | `checklist_items` | 15 inspection items with blocking flag |
 | `checklist_sub_items` | Nested sub-items per checklist item |
 | `drawing_sheets` | Seeded drawing sheets (5 sheets per project) |
+| `drawings` | Uploaded architectural PDFs with parse results |
 | `evidence` | Uploaded photos/videos with correlation metadata |
 | `ai_detections` | AI analysis results with bounding boxes |
 | `audit_logs` | Immutable action log (all state changes) |
@@ -167,6 +169,16 @@ All endpoints return JSON. Timestamps are ISO 8601.
 | `GET` | `/api/projects` | List all projects |
 | `POST` | `/api/projects` | Create project (auto-creates Step 10 + seeds data) |
 | `GET` | `/api/projects/[id]` | Get project with Step 10 status |
+| `GET` | `/api/projects/[id]/drawings` | List drawings for project |
+| `POST` | `/api/projects/[id]/drawings` | Upload drawing (multipart) |
+
+### Drawings
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/api/drawings/[id]` | Get single drawing |
+| `DELETE` | `/api/drawings/[id]` | Delete drawing |
+| `POST` | `/api/drawings/[id]/parse` | Parse drawing with Gemini AI |
 
 ### Step 10
 
@@ -230,6 +242,16 @@ Every piece of evidence MUST be correlated before upload:
 - Verification Category (6 options: Dimensional, Location, Material, Connection, Deficiency, As-Built)
 
 This links each photo to specific plan details for the AI to compare against.
+
+### Architectural Drawing Parsing
+
+Upload architectural/structural PDFs to each project. The AI parses them to establish **ground truth** for photo verification:
+
+- Upload PDF via the Project Detail page (`/projects/[id]`)
+- Click "Parse with AI" to extract structured data with Gemini 2.5 Flash
+- Extracted data includes: project info, overall dimensions, structural elements (headers, beams, columns, shear walls), room dimensions and elevations, specifications by category
+- Parsed data appears in the drawing's detail panel
+- Without `GEMINI_API_KEY`: mock data is generated for demo purposes
 
 ### Audit Logging
 
